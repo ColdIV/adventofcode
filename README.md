@@ -1,4 +1,4 @@
-# adventofcode-2020
+# adventofcode
 https://adventofcode.com/
 
 Just a small repo where I upload my solutions to Advent of Code 2020.
