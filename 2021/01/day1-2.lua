@@ -17,14 +17,29 @@ end
 
 local file = 'data.txt'
 local lines = lines_from(file)
-local sum = 0
+local sum = {}
 
 for k, v in pairs(lines) do
-	if k > 1 then
-		if lines[k] > lines[k-1] then
-			sum = sum + 1
+	for i = 1, #lines - 2, 1 do
+		sum[i] = sum[i] or {c = 0, sum = 0}
+		if sum[i].c < 3 then
+			sum[i].c = sum[i].c + 1
+			sum[i].sum = sum[i].sum + v
 		end
+		if sum[i].c == 1 then break end
 	end
 end
 
-print (sum)
+for i = 1, #sum, 1 do
+	print (sum[i].sum)
+end
+
+
+local res = 0
+for i = 2, #sum, 1 do
+	if sum[i].sum > sum[i - 1].sum then
+		res = res + 1
+	end
+end
+
+print (res)
