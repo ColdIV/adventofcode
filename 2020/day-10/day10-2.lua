@@ -15,7 +15,7 @@ end
 
 ---
 
-local file = 'test.txt'
+local file = 'data.txt'
 local lines = lines_from(file)
 local sum = 0
 local adapters = {}
