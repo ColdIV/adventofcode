@@ -11,3 +11,6 @@ I am not overly concerned with style / best practices - just having some fun.
 
 # 2021
 Lua it is.
+
+# 2022
+Lua again, let's see how long I participate this time...
