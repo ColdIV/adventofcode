@@ -102,26 +102,30 @@ for i=1, #stacks do
 end
 --]]
 
-print('before')
+--print('before')
+--[[
 do
     local lastCrate
     for i=1, #stacks do
-        if stacks[i][#stacks[i]] then
-            print(stacks[i][#stacks[i]])
+        if stacks[i][#stacks[i] ] then
+            print(stacks[i][#stacks[i] ])
         end
     end
 end
+--]]
 
 for i=1, #cmds do
     doCmd(cmds[i])
 end
 
-print('after')
+--print('after')
+local prettySolution = ""
 do
     local lastCrate
     for i=1, #stacks do
         if stacks[i][#stacks[i]] then
-            print(stacks[i][#stacks[i]])
+            --print(stacks[i][#stacks[i]])
+            prettySolution = prettySolution .. stacks[i][#stacks[i]]
         end
     end
 end
@@ -135,4 +139,4 @@ for i=1, #stacks do
 end
 --]]
 
---print (sum)
+print (prettySolution)
